@@ -7,20 +7,20 @@ type Props = {
 
 const UserProfile: FunctionComponent<Props> = ({ lover }) => {
   return (
-    <div style={{ display: 'flex', marginTop: '80px' }}>
+    <div style={{ display: 'flex', marginTop: '150px', backgroundColor: '#d92e3f', color: 'white' }}>
       <div
         class="lover-profile"
         style={{
           backgroundImage: `url(${lover.photo})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: "20px",
+          padding: "50px",
           color: "#fff",
           minWidth: "300px",
         }}
       >
       </div>
-      <div style={{ marginLeft: "20px" }}>
+      <div style={{ marginLeft: "50px", marginRight: "50px" }}>
         <h2 class="lover-name">{lover.name}</h2>
         <p class="lover-age"><strong>Age</strong>: {lover.age}</p>
         <p class="lover-sex"><strong>Sex</strong>: {lover.sex}</p>
