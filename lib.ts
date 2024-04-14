@@ -74,6 +74,6 @@ export const fixBadLover = (lover: BadLover): Lover => {
     ...lover,
     age: Number(lover.age),
     hobbies: Array.isArray(lover.hobbies) ? lover.hobbies : (lover.hobbies ? [lover.hobbies] : []),
-    comments: Array.isArray(lover.comments) ? lover.comments : (lover.comments ? [lover.comments] : []),
+    comments: Array.isArray(lover.comments) ? lover.comments : (lover.comments ? [{user: "", message: lover.comments}] : []),
   };
 }

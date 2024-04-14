@@ -6,6 +6,19 @@ const LoginForm: FunctionComponent = () => {
   const [name, setName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const handleLogOut = () => {
+    fetch('/logout', {
+      method: 'GET',
+      credentials: 'include',
+    })
+    .then(() => {
+      window.location.href = '/';
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  };
+
   return (
     <div class="formBody">
       <form
@@ -38,6 +51,10 @@ const LoginForm: FunctionComponent = () => {
         </button>
         
       </form>
+      <br />
+      <button class="trippyBackgroundAnimated bottomButton" onClick={handleLogOut}>
+        Log Out
+      </button>
     </div>
   );
 };

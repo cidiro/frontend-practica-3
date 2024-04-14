@@ -5,18 +5,19 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
+import * as $account from "./routes/account.tsx";
 import * as $confirmation from "./routes/confirmation.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
+import * as $logout from "./routes/logout.tsx";
 import * as $lover_name_ from "./routes/lover/[name].tsx";
 import * as $signup from "./routes/signup.tsx";
-import * as $user from "./routes/user.tsx";
 import * as $CustomHeader from "./islands/CustomHeader.tsx";
-import * as $HiButton from "./islands/HiButton.tsx";
 import * as $LoginForm from "./islands/LoginForm.tsx";
 import * as $LoverProfile from "./islands/LoverProfile.tsx";
 import * as $LoversHome from "./islands/LoversHome.tsx";
 import * as $SignUpForm from "./islands/SignUpForm.tsx";
+import * as $UserProfile from "./islands/UserProfile.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -24,20 +25,21 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
+    "./routes/account.tsx": $account,
     "./routes/confirmation.tsx": $confirmation,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
+    "./routes/logout.tsx": $logout,
     "./routes/lover/[name].tsx": $lover_name_,
     "./routes/signup.tsx": $signup,
-    "./routes/user.tsx": $user,
   },
   islands: {
     "./islands/CustomHeader.tsx": $CustomHeader,
-    "./islands/HiButton.tsx": $HiButton,
     "./islands/LoginForm.tsx": $LoginForm,
     "./islands/LoverProfile.tsx": $LoverProfile,
     "./islands/LoversHome.tsx": $LoversHome,
     "./islands/SignUpForm.tsx": $SignUpForm,
+    "./islands/UserProfile.tsx": $UserProfile,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

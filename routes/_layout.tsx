@@ -10,7 +10,7 @@ const Layout = (props: PageProps) => {
           { href: "/", text: "Home" },
           { href: "/login", text: "Log In" },
           { href: "/signup", text: "Sign Up" },
-          { href: "/user", text: "Account" },
+          { href: "/account", text: "Account" },
         ]}
       />
       <Component />

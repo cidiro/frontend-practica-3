@@ -6,7 +6,7 @@ export type Lover = {
   description: string;
   hobbies: string[];
   photo: string;
-  comments: string[];
+  comments: Array<{ user: string; message: string }>;
 };
 
 export type BadLover = {
@@ -17,5 +17,5 @@ export type BadLover = {
   description: string;
   hobbies: string[] | string;
   photo: string;
-  comments: string[] | string;
+  comments: Array<{ user: string; message: string }> | string;
 };

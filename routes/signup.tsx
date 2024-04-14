@@ -30,7 +30,7 @@ export const handler: Handlers = {
       age,
       sex,
       description,
-      hobbies,
+      hobbies: hobbies.split(";").map(hobby => hobby.trim()),
       photo,
       comments: [],
     });

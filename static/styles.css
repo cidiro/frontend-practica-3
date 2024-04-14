@@ -11,6 +11,7 @@
 
 body {
   margin: 0;
+  font-family: 'Lobster Two';
 }
 .columnBody {
     display: flex;
@@ -263,6 +264,11 @@ input {
   cursor: pointer;
 }
 
+.bottomButton {
+  position: fixed;
+  bottom: 50px;
+}
+
 .vintage__container {
   display: inline-block;
   margin: 25px auto 40px;
@@ -303,4 +309,48 @@ input {
     34px 17px rgba(0, 0, 0, 0.3),
     36px 18px rgba(0, 0, 0, 0.1),
     40px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .columnBody {
+    flex-direction: column;
+  }
+  .headerSection {
+    flex-direction: column;
+  }
+  .titleSection {
+    height: auto;
+  }
+  .lover {
+    width: 100%;
+    height: auto;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .column {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .columnBody {
+    flex-direction: row;
+  }
+  .headerSection {
+    flex-direction: row;
+  }
+  .titleSection {
+    height: 400px;
+  }
+  .lover {
+    width: 50%;
+    height: auto;
+  }
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column {
+    margin: 15px 0;
+  }
 }

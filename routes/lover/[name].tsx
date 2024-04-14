@@ -9,13 +9,13 @@ export const handler: Handlers = {
     try {
       const lover = await getLover(name);
       if (!lover) {
-        return new Response("Hero not found", { status: 404 });
+        return new Response("Lover not found", { status: 404 });
       }
 
       return ctx.render(fixBadLover(lover));
     } catch (error) {
       console.error(error);
-      return new Response("Error", { status: 500 });
+      return new Response("Error: Lover not found", { status: 500 });
     }
   },
 };

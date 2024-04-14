@@ -11,21 +11,6 @@ type Props = {
   lovers: Lover[];
 };
 
-// export const handler: Handlers = {
-//   GET: async (
-//     _req: Request,
-//     ctx: FreshContext<unknown, { pageData: Lover[] }>,
-//   ) => {
-//     try {
-//       const pageData = await getLovers();
-//       return ctx.render({ pageData });
-//     } catch(e) {
-//       console.error(e);
-//       return new Response("Error", { status: 500 });
-//     }
-//   },
-// };
-
 const LoversHome: FunctionComponent<Props> = ({ lovers }) => {
   const filterName = useSignal<string>("");
   const filterAge = useSignal<string>("");

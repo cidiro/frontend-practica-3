@@ -13,8 +13,8 @@ const LoverCard: FunctionComponent<{ name: string; image: string }> = (
           backgroundPosition: "center",
         }}
       >
-        <div class="loverName">{name}</div>
       </div>
+      <h3 class="loverName">{name}</h3>
     </a>
   );
 };

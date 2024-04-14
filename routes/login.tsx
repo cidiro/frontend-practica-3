@@ -16,8 +16,6 @@ export const handler: Handlers = {
     const cookies = getCookies(req);
     const users = cookies.users ? JSON.parse(decodeURIComponent(cookies.users)) : {};
 
-    console.log(users);
-
     if (users[name] === password) {
       const headers = new Headers();
       headers.append('Set-Cookie', `curr_user=${encodeURIComponent(name)}; HttpOnly; Path=/; SameSite=Strict`);
